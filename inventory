@@ -1,0 +1,137 @@
+[primary]
+AD-PNI-1.MyDomain.local
+DB-App-PNI-1.MyDomain.local
+RDGateway-1.MyDomain.local
+Data-PNI-1.MyDomain.local
+remoteapp-1.MyDomain.local
+RDSessionHost-1.MyDomain.local
+RDSessionHost-3.MyDomain.local
+RDSessionHost-5.MyDomain.local
+RDSessionHost-7.MyDomain.local
+remoteapp-3.MyDomain.local
+remoteapp-5.MyDomain.local
+
+[secondary]
+AD-PNI-2.MyDomain.local
+Data-PNI-2.MyDomain.local
+DB-App-PNI-2.MyDomain.local
+RDGateway-2.MyDomain.local
+remoteapp-2.MyDomain.local
+RDSessionHost-2.MyDomain.local
+RDSessionHost-4.MyDomain.local
+RDSessionHost-6.MyDomain.local
+RDSessionHost-8.MyDomain.local
+remoteapp-4.MyDomain.local
+remoteapp-6.MyDomain.local
+
+[sql]
+DB-App-PNI-1.MyDomain.local
+DB-App-PNI-2.MyDomain.local
+
+[fileshare]
+Data-PNI-1.MyDomain.local
+Data-PNI-2.MyDomain.local
+
+
+[monitoring]
+grafana-1.MyDomain.local
+kibana-2.MyDomain.local
+
+[gateway]
+RDGateway-1.MyDomain.local
+RDGateway-2.MyDomain.local
+remoteapp-1.MyDomain.local
+remoteapp-2.MyDomain.local
+
+
+[rdsessionhosts]
+RDSessionHost-1.MyDomain.local
+RDSessionHost-2.MyDomain.local
+RDSessionHost-3.MyDomain.local
+RDSessionHost-4.MyDomain.local
+RDSessionHost-5.MyDomain.local
+RDSessionHost-6.MyDomain.local
+RDSessionHost-7.MyDomain.local
+RDSessionHost-8.MyDomain.local
+
+
+[rasessionhosts]
+remoteapp-3.MyDomain.local
+remoteapp-4.MyDomain.local
+remoteapp-5.MyDomain.local
+remoteapp-6.MyDomain.local
+
+
+
+[sql:vars]
+ansible_ssh_user = 'user@domain'
+ansible_password = 'password'
+ansible_connection = winrm
+ansible_ssh_port = 5986
+ansible_winrm_transport = kerberos
+ansible_winrm_server_cert_validation = ignore
+validate_certs = false
+
+[rasessionhosts:vars]
+ansible_ssh_user = 'user@domain'
+ansible_password = 'password'
+ansible_connection = winrm
+ansible_ssh_port = 5986
+ansible_winrm_transport = kerberos
+ansible_winrm_server_cert_validation = ignore
+validate_certs = false
+
+[rdsessionhosts:vars]
+ansible_ssh_user = 'user@domain'
+ansible_password = 'password'
+ansible_connection = winrm
+ansible_ssh_port = 5986
+ansible_winrm_transport = kerberos
+ansible_winrm_server_cert_validation = ignore
+validate_certs = false
+
+[gateway:vars]
+ansible_ssh_user = 'user@domain'
+ansible_password = 'password'
+ansible_connection = winrm
+ansible_ssh_port = 5986
+ansible_winrm_transport = kerberos
+ansible_winrm_server_cert_validation = ignore
+validate_certs = false
+
+[fileshare:vars]
+ansible_ssh_user = 'user@domain'
+ansible_password = 'password'
+ansible_connection = winrm
+ansible_ssh_port = 5986
+ansible_winrm_transport = kerberos
+ansible_winrm_server_cert_validation = ignore
+validate_certs = false
+
+
+[monitoring:vars]
+ansible_ssh_user = 'user@domain'
+ansible_password = 'password'
+ansible_connection = winrm
+ansible_ssh_port = 5986
+ansible_winrm_transport = kerberos
+ansible_winrm_server_cert_validation = ignore
+validate_certs = false
+
+[primary:vars]
+ansible_ssh_user = 'user@domain'
+ansible_password = 'password'
+ansible_connection = winrm
+ansible_ssh_port = 5985
+ansible_winrm_transport = kerberos
+ansible_winrm_server_cert_validation = ignore
+validate_certs = false
+
+[secondary:vars]
+ansible_ssh_user = 'user@domain'
+ansible_password = 'password'
+ansible_connection = winrm
+ansible_ssh_port = 5985
+ansible_winrm_transport = kerberos
+ansible_winrm_server_cert_validation = ignore
+validate_certs = false

@@ -229,6 +229,15 @@
     Measurement = "win_proc"
     #IncludeTotal=false #Set to true to include _Total instance when querying for all (*).
 
+[[inputs.win_perf_counters.object]]
+    ObjectName = "Terminal Services"
+    Measurement = "Terminal_Service"
+    Instances = ["------"]
+    Counters = [
+      "Active Sessions",
+      "Inactive Sessions",
+      "Total Sessions"
+    ]
 
 [[inputs.exec]]
     commands = [ 
@@ -236,4 +245,3 @@
 	]
     timeout = "5s"
 	data_format = "influx"
-
